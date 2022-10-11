@@ -1,7 +1,5 @@
 import pygame
-
-WIDTH = 600
-HEIGHT = 600
+from Consts import WIDTH, HEIGHT
 
 class Player(pygame.sprite.Sprite):
 
@@ -12,7 +10,7 @@ class Player(pygame.sprite.Sprite):
         super().__init__()
         self.dx = 0
         self.dy = 0
-        self.image = pygame.Surface((50, 50))
+        self.image = pygame.image.load("картинка")
         self.image.fill(pygame.Color("green"))
         self.rect = self.image.get_rect()
         self.rect.center = (x, y)
@@ -33,10 +31,6 @@ class Player(pygame.sprite.Sprite):
                 self.dx, self.dy = 1, 0
 
         self.rect.center = (self.rect.centerx + (self.dx * 2), self.rect.centery + (self.dy * 2))
-
-
-
-
 
 
 # main
